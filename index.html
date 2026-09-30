@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<title>Fatimah's Learning Hub</title>
+<meta name="description" content="A colorful learning hub for young children — Mathematics, English, Poems & Stories, Islamic Studies, and Professions." />
+<meta property="og:title" content="Fatimah's Learning Hub" />
+<meta property="og:description" content="A colorful learning hub for young children — Mathematics, English, Poems & Stories, Islamic Studies, and Professions." />
+<meta property="og:image" content="images/professions/cover.jpg" />
+<meta property="og:type" content="website" />
+<meta name="theme-color" content="#8B5CF6" />
+<link rel="manifest" href="manifest.json" />
+<link rel="apple-touch-icon" href="images/icons/apple-touch-icon.png" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="apple-mobile-web-app-title" content="Learning Hub" />
+<link rel="icon" type="image/png" sizes="192x192" href="images/icons/icon-192.png" />
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌈</text></svg>" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- Name entry gate -->
+<div id="gate" class="gate">
+  <div class="gate-card">
+    <div class="gate-sun">🎈</div>
+    <h1>Fatimah's Learning Hub</h1>
+    <p class="gate-sub">A colorful place to learn Math, English, Stories, Islamic Studies &amp; Professions!</p>
+    <label for="nameInput" class="gate-label">What's your name, friend?</label>
+    <input id="nameInput" class="gate-input" type="text" maxlength="20" placeholder="Type your name here..." autocomplete="off" />
+    <button id="gateGo" class="btn btn-primary btn-big">Let's Go! 🚀</button>
+    <p id="gateHint" class="gate-hint">Ask a grown-up if you need help typing!</p>
+  </div>
+</div>
+
+<!-- Level chooser (must pick before subjects appear) -->
+<div id="levelGate" class="gate hidden">
+  <div class="gate-card levelgate-card">
+    <h1 id="levelGreeting">Hi there! 👋</h1>
+    <p class="gate-sub">Which group are you in today?</p>
+    <div class="levelgate-options" id="levelGateOptions"></div>
+  </div>
+</div>
+
+<!-- App shell -->
+<div id="app" class="app hidden">
+
+  <header class="topbar">
+    <div class="brand" id="brandHome">
+      <span class="brand-emoji">🎈</span>
+      <span class="brand-text">Fatimah's Learning Hub</span>
+    </div>
+
+    <nav class="subjectnav">
+      <button class="navtrigger" id="navTrigger">Explore Subjects <span class="caret">▾</span></button>
+      <div class="navmenu" id="navMenu"></div>
+    </nav>
+
+    <div class="whoami">
+      <button class="soundbtn" id="soundBtn" title="Sound on/off" aria-label="Sound on/off">🔔</button>
+      <span id="greetName">Hi, friend!</span>
+      <button class="pill" id="levelPill" title="Change your group"></button>
+    </div>
+  </header>
+  <div class="rainbow-strip"></div>
+
+  <main id="main" class="main"></main>
+
+  <footer class="footer">
+    <span>Made with 🎨 for Fatimah's Learning Hub</span>
+  </footer>
+</div>
+
+<script src="data.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
